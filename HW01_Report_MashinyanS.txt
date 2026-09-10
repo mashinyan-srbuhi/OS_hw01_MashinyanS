@@ -1,0 +1,43 @@
+Author: Mashinyan Srbuhi
+GitHub Repo: https://github.com/mashinyan-srbuhi/OS_hw01_MashinyanS.git
+
+Task 1: Basics of Pointers
+
+Declares an integer num = 7 and a pointer p that points to it (i.e. p stores the address of num).
+Prints the value of num.
+Prints its address, first using &num (& returns the address of a variable), and then using p, since p already stores the address of num.
+Modifies num through the pointer using *p (* allows access to the value stored at the address).
+Prints the updated value of num.
+
+Task2: Pointer Arithmetic
+
+Declares an array of 5 integers.
+Declares a pointer a that (automatically) points to the first element of the array
+Prints each element of the array using pointer, where i moves the pointer i elements forward and * allows access to the value at that position (or address if more correctly).
+Modifies every element by adding 100 to it, again using i and *.
+Prints the modified array, once through the pointer (*,i) and once through the array indexes (arr[i]). Both are giving the same result.
+
+Task3: Pointers and Functions
+
+Defines a function swap(int *a, int *b), that swaps the values of two integers by accessing the values stored at the addresses in a and b, using *.
+In main(), declares a = 10 and b = 20. I have intentionally named both the variables and the method parameters a and b to show that they have no relation to eachother.
+Prints the values of a and b before swapping.
+Calls swap(&a, &b) (& passes the ADDRESSES of and b to the function).
+Prints the values once again.
+
+Task4: Pointers to Pointers
+
+Declares an integer num = 10 and a pointer p that points to num
+Declares a double pointer p2 that points to p (i.e. p2 stores the address of p, which  itself stores the address of num).
+Prints the value of num using the pointer (our well-known *p).
+Prints the value of num using the double pointer, **p2, which accesses the value stored at the address of p2, which is the address stored in p, and then accesses the value stored at that address, which is the value of num.
+
+Task5: Strings and Character Pointers
+
+Declares a string as a character array, and a pointer p that points to the first character of the array.
+Prints the string using a loop that dereferences p (using *) to print the current character, then increments the pointer to move to the next one (similar to the array in task2 but I didn't use i to move forward).
+Declares two more pointers, str_start and str_end, both pointing to the start of the string.
+Using str_end to move forward inside the string until it reaches the null terminator, '\0'. This method wasn't discussed during the lecture, but we were allowed to use any approach.
+Computes the length of the string by subtracting the two pointers.
+Prints the length.
+
